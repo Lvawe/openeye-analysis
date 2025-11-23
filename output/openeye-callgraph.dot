@@ -1,0 +1,92 @@
+digraph CallGraph {
+    node [shape=box, style=filled, fillcolor=lightblue];
+    rankdir=TB;
+    concentrate=true;
+
+    "EntryAbility.onCreate" [label="EntryAbility.onCreate", fillcolor=lightcoral];
+    "hilog.info" [label="hilog.info", fillcolor=lightblue];
+    "EntryAbility.onDestroy" [label="EntryAbility.onDestroy", fillcolor=lightcoral];
+    "EntryAbility.onWindowStageCreate" [label="EntryAbility.onWindowStageCreate", fillcolor=lightcoral];
+    "windowStage.getMainWindow" [label="windowStage.getMainWindow", fillcolor=lightblue];
+    "windowStage.loadContent" [label="windowStage.loadContent", fillcolor=lightblue];
+    "EntryAbility.onWindowStageDestroy" [label="EntryAbility.onWindowStageDestroy", fillcolor=lightcoral];
+    "EntryAbility.onForeground" [label="EntryAbility.onForeground", fillcolor=lightcoral];
+    "EntryAbility.onBackground" [label="EntryAbility.onBackground", fillcolor=lightcoral];
+    "MainPage.aboutToAppear" [label="MainPage.aboutToAppear", fillcolor=lightcoral];
+    "emitter.on" [label="emitter.on", fillcolor=lightblue];
+    "MainPage.aboutToDisappear" [label="MainPage.aboutToDisappear", fillcolor=lightcoral];
+    "emitter.off" [label="emitter.off", fillcolor=lightblue];
+    "MainPage.onPageShow" [label="MainPage.onPageShow", fillcolor=lightcoral];
+    "MainPage.onPageHide" [label="MainPage.onPageHide", fillcolor=lightcoral];
+    "SplashPage.aboutToAppear" [label="SplashPage.aboutToAppear", fillcolor=lightcoral];
+    "setTimeout" [label="setTimeout", fillcolor=lightblue];
+    "CategoryDetailPage.aboutToAppear" [label="CategoryDetailPage.aboutToAppear", fillcolor=lightcoral];
+    "router.getParams" [label="router.getParams", fillcolor=lightblue];
+    "loadNet" [label="loadNet", fillcolor=lightblue];
+    "DetailPage.aboutToAppear" [label="DetailPage.aboutToAppear", fillcolor=lightcoral];
+    "VideoBottomComponent.aboutToAppear" [label="VideoBottomComponent.aboutToAppear", fillcolor=lightcoral];
+    "ContainerPage.aboutToAppear" [label="ContainerPage.aboutToAppear", fillcolor=lightcoral];
+    "convertTitle" [label="convertTitle", fillcolor=lightblue];
+    "FindPage.aboutToAppear" [label="FindPage.aboutToAppear", fillcolor=lightcoral];
+    "CategoryPage.aboutToAppear" [label="CategoryPage.aboutToAppear", fillcolor=lightcoral];
+    "FocusPage.aboutToAppear" [label="FocusPage.aboutToAppear", fillcolor=lightcoral];
+    "TopicPage.aboutToAppear" [label="TopicPage.aboutToAppear", fillcolor=lightcoral];
+    "HomePage.aboutToAppear" [label="HomePage.aboutToAppear", fillcolor=lightcoral];
+    "CoordinatePage.aboutToAppear" [label="CoordinatePage.aboutToAppear", fillcolor=lightcoral];
+    "forEach" [label="forEach", fillcolor=lightblue];
+    "HotPage.onPageShow" [label="HotPage.onPageShow", fillcolor=lightcoral];
+    "HotPage.onPageHide" [label="HotPage.onPageHide", fillcolor=lightcoral];
+    "RankPage.aboutToAppear" [label="RankPage.aboutToAppear", fillcolor=lightcoral];
+    "MinePage.aboutToAppear" [label="MinePage.aboutToAppear", fillcolor=lightcoral];
+    "MinePage.aboutToDisappear" [label="MinePage.aboutToDisappear", fillcolor=lightcoral];
+    "TopicDetailPage.aboutToAppear" [label="TopicDetailPage.aboutToAppear", fillcolor=lightcoral];
+    "CommonSkeleton.aboutToAppear" [label="CommonSkeleton.aboutToAppear", fillcolor=lightcoral];
+    "push" [label="push", fillcolor=lightblue];
+    "CommonDialog.aboutToAppear" [label="CommonDialog.aboutToAppear", fillcolor=lightcoral];
+    "CommonTopBar.aboutToAppear" [label="CommonTopBar.aboutToAppear", fillcolor=lightcoral];
+    "setSystemStatusBar" [label="setSystemStatusBar", fillcolor=lightblue];
+    "CustomTabLayout.aboutToAppear" [label="CustomTabLayout.aboutToAppear", fillcolor=lightcoral];
+    "CustomTabLayout.aboutToDisappear" [label="CustomTabLayout.aboutToDisappear", fillcolor=lightcoral];
+    "LoadingDialog.aboutToAppear" [label="LoadingDialog.aboutToAppear", fillcolor=lightcoral];
+
+    "EntryAbility.onCreate" -> "hilog.info";
+    "EntryAbility.onDestroy" -> "hilog.info";
+    "EntryAbility.onWindowStageCreate" -> "hilog.info";
+    "EntryAbility.onWindowStageCreate" -> "windowStage.getMainWindow";
+    "EntryAbility.onWindowStageCreate" -> "windowStage.loadContent";
+    "EntryAbility.onWindowStageDestroy" -> "hilog.info";
+    "EntryAbility.onForeground" -> "hilog.info";
+    "EntryAbility.onBackground" -> "hilog.info";
+    "MainPage.aboutToAppear" -> "emitter.on";
+    "MainPage.aboutToDisappear" -> "emitter.off";
+    "SplashPage.aboutToAppear" -> "setTimeout";
+    "CategoryDetailPage.aboutToAppear" -> "router.getParams";
+    "CategoryDetailPage.aboutToAppear" -> "router.getParams";
+    "CategoryDetailPage.aboutToAppear" -> "router.getParams";
+    "CategoryDetailPage.aboutToAppear" -> "loadNet";
+    "DetailPage.aboutToAppear" -> "router.getParams";
+    "DetailPage.aboutToAppear" -> "router.getParams";
+    "VideoBottomComponent.aboutToAppear" -> "loadNet";
+    "ContainerPage.aboutToAppear" -> "router.getParams";
+    "ContainerPage.aboutToAppear" -> "convertTitle";
+    "FindPage.aboutToAppear" -> "loadNet";
+    "CategoryPage.aboutToAppear" -> "loadNet";
+    "FocusPage.aboutToAppear" -> "loadNet";
+    "TopicPage.aboutToAppear" -> "loadNet";
+    "HomePage.aboutToAppear" -> "loadNet";
+    "CoordinatePage.aboutToAppear" -> "forEach";
+    "RankPage.aboutToAppear" -> "loadNet";
+    "TopicDetailPage.aboutToAppear" -> "router.getParams";
+    "TopicDetailPage.aboutToAppear" -> "loadNet";
+    "CommonSkeleton.aboutToAppear" -> "push";
+    "CommonTopBar.aboutToAppear" -> "setSystemStatusBar";
+
+    // Legend
+    subgraph cluster_legend {
+        label="图例";
+        style=filled;
+        fillcolor=white;
+        "lifecycle" [label="生命周期方法", fillcolor=lightcoral];
+        "normal" [label="普通方法", fillcolor=lightblue];
+    }
+}
