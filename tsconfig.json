@@ -22,7 +22,7 @@
   },
   "include": [
     "*.ts"
-  ],
+, "version1.0/analyzeOpenEyeProject.ts", "version2.0/analyzeOpenEyeLifecycle.ts", "version2.0/analyzeOpenEyeLifecycleEnhanced.ts"  ],
   "exclude": [
     "node_modules"
   ]

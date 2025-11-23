@@ -13,7 +13,7 @@ import {
     Stmt,
     UndefinedVariableChecker,
     UndefinedVariableSolver
-} from "../arkanalyzer/src/index";
+} from "../../arkanalyzer/src/index";
 import * as fs from 'fs';
 import * as path from 'path';
 

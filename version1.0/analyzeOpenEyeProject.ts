@@ -11,7 +11,7 @@ import {
     BasicBlock,
     Stmt,
     Local
-} from "../arkanalyzer/src/index";
+} from "../../arkanalyzer/src/index";
 
 /**
  * 分析统计信息

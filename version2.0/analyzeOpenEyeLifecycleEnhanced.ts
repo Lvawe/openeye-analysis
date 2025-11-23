@@ -1,14 +1,14 @@
 // analyzeOpenEyeLifecycleEnhanced.ts - 增强版生命周期分析
 // 区分：定义的生命周期 vs 实际使用的生命周期
 
-import { Scene } from '../arkanalyzer/src/Scene';
-import { SceneConfig } from '../arkanalyzer/src/Config';
-import { ArkClass } from '../arkanalyzer/src/core/model/ArkClass';
-import { ArkMethod } from '../arkanalyzer/src/core/model/ArkMethod';
+import { Scene } from '../../arkanalyzer/src/Scene';
+import { SceneConfig } from '../../arkanalyzer/src/Config';
+import { ArkClass } from '../../arkanalyzer/src/core/model/ArkClass';
+import { ArkMethod } from '../../arkanalyzer/src/core/model/ArkMethod';
 import { 
     LIFECYCLE_METHOD_NAME,
     COMPONENT_LIFECYCLE_METHOD_NAME 
-} from '../arkanalyzer/src/utils/entryMethodUtils';
+} from '../../arkanalyzer/src/utils/entryMethodUtils';
 
 /**
  * 生命周期方法类型
